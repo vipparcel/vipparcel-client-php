@@ -8,6 +8,7 @@
         "classmap": ["VP"]
     },
     "license": "GNU GENERAL PUBLIC LICENSE",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "VIPparcel",
