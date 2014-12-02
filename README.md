@@ -17,7 +17,7 @@ https://vipparcel.com/docs/api/
 Run the Composer command
 
 ```bash
-composer require Invision70/vipparcel-client-php
+composer require "vipparcel/client" 
 ```
 
 After installing, you need to require Composer's autoloader:
