@@ -4,6 +4,9 @@
     "require": {
         "guzzle/guzzle": "~3.9"
     },
+    "autoload": {
+        "classmap": ["VP"]
+    },
     "license": "GNU GENERAL PUBLIC LICENSE",
     "authors": [
         {
