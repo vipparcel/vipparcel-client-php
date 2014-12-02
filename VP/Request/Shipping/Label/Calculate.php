@@ -5,12 +5,9 @@ class VP_Request_Shipping_Label_Calculate extends VP_Abstract_Request
 
     public function is_international()
     {
-
-        if (empty($this->_params['mailClass']))
-        {
+        if (empty($this->_params['mailClass'])) {
             throw new VP_Exception('Required parameter not passed: mailClass');
         }
-
         return (strpos($this->_params['mailClass'], 'International') !== FALSE);
     }
 

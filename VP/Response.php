@@ -23,8 +23,7 @@ class VP_Response {
     public function get_errors($single = TRUE)
     {
         $result = $this->as_array();
-        if ( ! empty($result['error']))
-        {
+        if ( ! empty($result['error'])) {
             $errors = (array) $result['error'];
             return ($single ? array_shift($errors) : $errors);
         }

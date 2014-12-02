@@ -14,48 +14,40 @@ class VP_Client {
     public function auth_token($value)
     {
         $this->_auth_token = $value;
-
         return $this;
     }
 
     public function is_test($value)
     {
         $this->_is_test = (bool) $value;
-
         return $this;
     }
 
     public function request(VP_Abstract_Request $request)
     {
         $this->_request = $request;
-
         return $this;
     }
 
     protected function _client_url()
     {
-        if ($this->_is_test === TRUE)
-        {
+        if ($this->_is_test === TRUE) {
             return self::URL_TEST;
         }
-
         return self::URL_PRODUCTION;
     }
 
     protected function _default_params()
     {
-        if ( ! $auth_token = $this->_auth_token)
-        {
+        if ( ! $auth_token = $this->_auth_token) {
             throw new VP_Exception('Required parameter not passed: authToken');
         }
-
         return array('authToken' => $auth_token);
     }
 
     public function execute()
     {
-        if ($this->_request === NULL)
-        {
+        if ($this->_request === NULL) {
             throw new VP_Exception('Request object does not exist');
         }
 
