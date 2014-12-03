@@ -1,0 +1,21 @@
+{
+    "name": "vipparcel/client",
+    "description": "VIPparcel Client PHP",
+    "require": {
+        "guzzle/guzzle": "~3.9"
+    },
+    "autoload": {
+        "classmap": ["VP"]
+    },
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "authors": [
+        {
+            "name": "VIPparcel",
+            "email": "support@vipparcel.com"
+        },
+        {
+            "name": "Invision",
+            "email": "invision70@gmail.com"
+        }
+    ]
+}
