@@ -102,4 +102,3 @@ Location > Country
 
 Location > State
 * [GET] VP_Request_Location_State_List
->>>>>>> d9fb95780184bae41906e2026a2ccdf65ab3ecfd
