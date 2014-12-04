@@ -27,8 +27,6 @@ require 'vendor/autoload.php';
 ```
 
 ## Examples ##
-<<<<<<< HEAD
-@TODO
 =======
 ```php
 $client = new VP_Client();
