@@ -18,7 +18,7 @@ class VP_Request_Shipping_Label_Print extends VP_Abstract_Request
 
     public function info_url()
     {
-        return '/shipping/label/calculate';
+        return '/shipping/label/print';
     }
 
     public function get_params()

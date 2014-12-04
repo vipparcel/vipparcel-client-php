@@ -54,15 +54,25 @@ class VP_Client {
         $request_method = $this->_request->get_method();
         $request_url = $this->_request->get_url();
         $send_params = array_merge($this->_default_params(), $this->_request->get_params());
-        $http_client = new \Guzzle\Service\Client($this->_client_url().$request_url);
+        $http_client = new \Guzzle\Http\Client();
+        $http_client->setSslVerification(true);
         $http_client->getEventDispatcher()->addListener('request.error', function(\Guzzle\Common\Event $event) {
             if ($event['response']->getStatusCode() != 200) {
                 $event->stopPropagation();
             }
         });
 
-        $response = $http_client->$request_method('?'.http_build_query($send_params))->send();
-        return new VP_Response($response);
+        $full_url = $this->_client_url().$request_url;
+
+        if (in_array($request_method, array('put', 'post')))
+        {
+            $response = $http_client->$request_method($full_url, array('content-type' => 'application/json'), $send_params);
+        }
+        else
+        {
+            $response = $http_client->$request_method($full_url.'?'.http_build_query($send_params), array('content-type' => 'application/json'));
+        }
+        return new VP_Response($response->send());
     }
 
 }

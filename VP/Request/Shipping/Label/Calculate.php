@@ -36,6 +36,7 @@ class VP_Request_Shipping_Label_Calculate extends VP_Abstract_Request
             'mailClass',
             'weightOz',
             'insuredValue',
+            'senderPostalCode',
             'countryId',
             'labelType',
         );
