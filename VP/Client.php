@@ -70,7 +70,7 @@ class VP_Client {
         }
         else
         {
-            $response = $http_client->$request_method($full_url.'?'.http_build_query($send_params), array('content-type' => 'application/x-www-form-urlencodedn'));
+            $response = $http_client->$request_method($full_url.'?'.http_build_query($send_params), array('content-type' => 'application/x-www-form-urlencoded'));
         }
         return new VP_Response($response->send());
     }
