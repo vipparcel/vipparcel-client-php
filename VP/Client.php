@@ -66,11 +66,11 @@ class VP_Client {
 
         if (in_array($request_method, array('put', 'post')))
         {
-            $response = $http_client->$request_method($full_url, array('content-type' => 'application/json'), $send_params);
+            $response = $http_client->$request_method($full_url, array('content-type' => 'application/x-www-form-urlencoded'), $send_params);
         }
         else
         {
-            $response = $http_client->$request_method($full_url.'?'.http_build_query($send_params), array('content-type' => 'application/json'));
+            $response = $http_client->$request_method($full_url.'?'.http_build_query($send_params), array('content-type' => 'application/x-www-form-urlencodedn'));
         }
         return new VP_Response($response->send());
     }
