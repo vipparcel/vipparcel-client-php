@@ -9,7 +9,7 @@ class VP_Request_Shipping_Refund_Request extends VP_Abstract_Request
 
     public function info_url()
     {
-        return '/shipping/refund/getList';
+        return '/shipping/refund/request';
     }
 
     public function info_params()
