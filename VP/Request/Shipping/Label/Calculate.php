@@ -39,6 +39,9 @@ class VP_Request_Shipping_Label_Calculate extends VP_Abstract_Request
             'senderPostalCode',
             'countryId',
             'labelType',
+            'length',
+            'height',
+            'width',
         );
 
         $domestic = array(
@@ -51,6 +54,9 @@ class VP_Request_Shipping_Label_Calculate extends VP_Abstract_Request
             'recipientPostalCode',
             'dimensionalWeight', // @TODO array
             'labelType',
+            'length',
+            'height',
+            'width',
         );
 
         return ($this->is_international() ? $international : $domestic);
