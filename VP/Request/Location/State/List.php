@@ -15,7 +15,8 @@ class VP_Request_Location_State_List extends VP_Abstract_Request
     public function info_params()
     {
         return array(
-            'authToken'
+            'authToken',
+            'military'
         );
     }
 
